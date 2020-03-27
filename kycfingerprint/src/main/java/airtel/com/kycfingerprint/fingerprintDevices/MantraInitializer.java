@@ -5,7 +5,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.widget.Toast;
+import android.util.Log;
 
 
 import com.mantra.mfs100.FingerData;
@@ -24,6 +24,7 @@ import airtel.com.kycfingerprint.utility.KycUtilityImage;
 
 public class MantraInitializer implements MFS100Event, FingerPrintInitWrapper, FingerPrintDataCallback {
 
+    private static final String TAG = "MantraInitializer";
     private Context context;
     private MFS100 mfs100;
     private FingerPrintCallback fingerPrintCallback;
@@ -56,9 +57,9 @@ public class MantraInitializer implements MFS100Event, FingerPrintInitWrapper, F
                 isInitialized = true;
                 int ret = 0;
                 ret = mfs100.Init();
-                Toast.makeText(context,"startAsyncCapture ",Toast.LENGTH_LONG).show();
+                Log.d(TAG,"initialize ");
                 if (ret != 0) {
-                    showToast(mfs100.GetErrorMsg(ret));
+                    showMSg(mfs100.GetErrorMsg(ret));
                 }
             }
         }).start();
@@ -113,19 +114,19 @@ public class MantraInitializer implements MFS100Event, FingerPrintInitWrapper, F
     public void OnDeviceAttached(int vid, int pid, boolean hasPermission) {
 
 
-        showToast(" vid " + vid + " pid " + pid + "  hasPermission " + hasPermission);
+        showMSg(" vid " + vid + " pid " + pid + "  hasPermission " + hasPermission);
 
 
     }
 
-    private void showToast(String msg){
-        Toast.makeText(context ,msg ,Toast.LENGTH_LONG).show();
+    private void showMSg(String msg){
+        Log.d(TAG,"msg  "+msg);
     }
 
     @Override
     public void OnDeviceDetached() {
 
-        showToast("OnDeviceDetached");
+        showMSg("OnDeviceDetached");
         UnInitScanner();
     }
 
@@ -145,15 +146,15 @@ public class MantraInitializer implements MFS100Event, FingerPrintInitWrapper, F
         try {
             FingerData fingerData = new FingerData();
 //            SetTextonuiThread("Place finger on scanner");
-            Toast.makeText(context,"startAsyncCapture ",Toast.LENGTH_LONG).show();
+            Log.d(TAG,"startAsyncCapture ");
             int ret = mfs100.AutoCapture(fingerData, timeout, true);
             if (ret != 0) {
                 fingerPrintCallback.onError(mfs100.GetErrorMsg(ret));
-                showToast(mfs100.GetErrorMsg(ret));
+                showMSg(mfs100.GetErrorMsg(ret));
             } else {
                 final Bitmap bitmap = BitmapFactory.decodeByteArray(fingerData.FingerImage(), 0, fingerData.FingerImage().length);
 
-                showToast("FingerPrint capture");
+                showMSg("FingerPrint capture");
 
                 OnPreview(fingerData);
                 OnCaptureCompleted(fingerData);
@@ -163,7 +164,7 @@ public class MantraInitializer implements MFS100Event, FingerPrintInitWrapper, F
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-            showToast("Error");
+            showMSg("Error");
         }
     }
 
@@ -176,9 +177,9 @@ public class MantraInitializer implements MFS100Event, FingerPrintInitWrapper, F
     private void UnInitScanner() {
         int ret = mfs100.UnInit();
         if (ret != 0) {
-            showToast(mfs100.GetErrorMsg(ret));
+            showMSg(mfs100.GetErrorMsg(ret));
         } else {
-            showToast("Uninit Success");
+            showMSg("Uninit Success");
         }
     }
 
