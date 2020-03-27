@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_masterkey"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_number_violet_shape"
+            style="@style/buttonNumberStyle"
+            android:text="Write Masterkey"/>
+        <Button
+            android:id="@+id/btn_writepinkey"
+            android:layout_width="180dp"
+            style="@style/buttonNumberStyle"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_number_violet_shape"
+            android:text="Write Pinkey"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView
+            android:text="PINBLOCK:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edt_pinblock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pin_amount_cardno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_number_violet_shape"
+        style="@style/buttonNumberStyle"
+        android:text="Get Pinpad(Amount and CardNo)"/>
+
+    <Button
+        android:id="@+id/btn_pin_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_number_violet_shape"
+        style="@style/buttonNumberStyle"
+        android:text="Get Pinpad(Amount)"/>
+
+    <Button
+        android:id="@+id/btn_pin_cardno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_number_violet_shape"
+        style="@style/buttonNumberStyle"
+        android:text="Get Pinpad(CardNo)"/>
+
+
+    <Button
+        android:id="@+id/btn_writedeskey"
+        android:layout_width="match_parent"
+        style="@style/buttonNumberStyle"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_number_violet_shape"
+        android:text="Write Deskey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView
+            android:text="Encrypt result:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edt_pindes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+    <Button
+    android:id="@+id/btn_des"
+        style="@style/buttonNumberStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:background="@drawable/button_number_violet_shape"
+    android:text="Encrypt data"/>
+
+</LinearLayout>

@@ -1,0 +1,709 @@
+<resources>
+    <string name="app_name">TPS900_Demo</string>
+
+
+    <!-- Print -->
+    <string name="print_test">Print Test</string>
+    <string name="printer_version">Printer Version：</string>
+    <string name="bar_code">Barcode:</string>
+    <string name="print_bar_code">Print Barcode</string>
+    <string name="D_bar_code">Qrcode:</string>
+    <string name="print_2D_barcode">Print Qrcode</string>
+    <string name="walk_paper_lines">Walk Paper Lines:</string>
+    <string name="walk_paper_test">Walk Paper</string>
+    <string name="left_margin">Left Margin:</string>
+    <string name="right_margin">Right Margin</string>
+    <string name="row_space">Row Space:</string>
+    <string name="font_size">Font Size：</string>
+    <string name="gray_level">Gray Level:</string>
+    <string name="print_content">Print Content：</string>
+    <string name="chinese_example">ZH Example</string>
+    <string name="english_example">EN Example</string>
+    <string name="fr_example">FR Example</string>
+    <string name="clear_text">Clear</string>
+    <string name="print_text">Print Text</string>
+    <string name="printing_wait">Printing, please wait……</string>
+    <string name="D_barcode_loading">Qrcode loading</string>
+    <string name="generate_barcode_wait">Generating barcode, please wait……</string>
+    <string name="input_print_data">Please input print data</string>
+    <string name="maker_search_distance">Walk Paper For Search Black Block:</string>
+    <string name="maker_walk_distance">Walk Paper After Haved Search:</string>
+    <string name="maker_walk_distance_range">(0-255)</string>
+    <string name="maker">Black Block Detection</string>
+    <string name="maker_error">maker input value not fit</string>
+    <string name="maker_not_find">Cannot Find Black Block</string>
+    <string name="papercut">Paper Cut</string>
+    <string name="walk_paper_intput_value">walk paper intput value not fit</string>
+    <string name="print_picture">Print Picture</string>
+    <string name="sure">sure</string>
+    <string name="not_find_picture">not find picture</string>
+    <string name="input_command">Please Input Command</string>
+    <string name="execute_command">Execute Command</string>
+    <string name="watting">Please wait while checking driver version</string>
+    <string name="noPaper">No paper</string>
+    <string name="noPaperNotice">No paper, please put paper in and retry</string>
+    <string name="LowBattery">Low battery, please connect the charger!</string>
+    <string name="overTemp">over temp !</string>
+    <string name="ptintInit">Printer initialing... Please try again after a few seconds.</string>
+    <string name="outOfLeft">Beyond the left margin！</string>
+    <string name="outOfLine">Beyond the row space！</string>
+    <string name="outOfFont">Beyond the font size！</string>
+    <string name="outOfGray">Beyond the gray level！</string>
+    <string name="outOfCharSpace">Beyond The Char Space！</string>
+    <string name="empty">The content is empty！</string>
+    <string name="lengthNotEnougth">The length is not enough！</string>
+    <string name="index_text">Print Text</string>
+    <string name="index_pic">Picture/Qrcode</string>
+    <string name="index_comm">Print Command</string>
+    <string name="input_content">input content</string>
+    <string name="dialog_comfirm">ConFirm</string>
+    <string name="operation_result">Result</string>
+    <string name="bl_dy">Print</string>
+    <string name="print_waring">Tip: If the SDK provides the function of can not meet your printing needs, you can send the print instruction way for implementation</string>
+    <string name="printer_type_common">SerialPort Printer</string>
+    <string name="printer_type_usb">USB Printer</string>
+    <string name="printer_type_select">Select Printer Type</string>
+
+    <!-- Scan barcode or qrcode -->
+    <string name="qrcode_verify">Qrcode</string>
+
+    <!-- Magnetic Card -->
+    <string name="magnetic_card_test">Magnetic Card</string>
+    <string name="track1">Track1</string>
+    <string name="track2">Track2</string>
+    <string name="track3">Track3</string>
+    <string name="read_card">Swipe Card</string>
+    <string name="quit">quit</string>
+    <string name="error_open_magnetic_card">Could not open magnetic card device</string>
+    <string name="error">Error</string>
+
+    <!-- RFID -->
+    <string name="rfid_test">RFID Test</string>
+    <string name="operation_fail">Operation failed</string>
+    <string name="init_card">Initialize</string>
+    <string name="query">Query</string>
+    <string name="consume">Consume</string>
+    <string name="recharge">Charge</string>
+    <string name="opening">Connecting card reader</string>
+    <string name="operating">Processing</string>
+    <string name="operation_succss">Operate Success</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="input_init_amount">Please input amount</string>
+    <string name="input_consume_amount">Please input amount</string>
+    <string name="input_recharge_amount">Please input amount</string>
+    <string name="balance">Blance</string>
+    <string name="no_enough_balance">Insufficient Balance</string>
+    <string name="input_amount">Input amount</string>
+    <string name="cpu_card_test">Cpu Card Test</string>
+    <string name="check_version">Please wait while checking driver version</string>
+    <string name="get_rfid_sn">Get Card Information</string>
+    <string name="m1_card_test">M1 Card Test</string>
+    <string name="ul_card_test">Ultralight Card Test</string>
+    <string name="card_sn">Card number is:</string>
+    <string name="ul_read_card">Read Card</string>
+    <string name="ul_write_card">Write Card</string>
+    <string name="read_succss">Read Success</string>
+    <string name="write_succss">Write Success</string>
+    <string name="cpucard_send_apdu_command">Send APDU Command</string>
+
+    <!-- ID Card -->
+    <string name="identity_test">ID Card Test</string>
+    <string name="bl_xsdxx">Displayed Info:</string>
+    <string name="idcard_czz">Proceeding...</string>
+    <string name="idcard_ljdkq">Connecting to ID reader...</string>
+    <string name="idcard_ljdkqcg">Connect reader success</string>
+    <string name="idcard_wfljdkq">Connect reader failed</string>
+    <string name="idcard_dqsbhcs">Read failed or time out</string>
+    <string name="idcard_xm">Name:</string>
+    <string name="idcard_xb">Gender:</string>
+    <string name="idcard_mz">Nation:</string>
+    <string name="idcard_csrq">Birthday:</string>
+    <string name="idcard_dz">Address:</string>
+    <string name="idcard_sfhm">ID：</string>
+    <string name="idcard_qzjg">Issuing authority：</string>
+    <string name="idcard_yxqx">"Exp date: "</string>
+    <string name="idcard_hqsfzxx">Get ID card information</string>
+    <string name="idcard_xzgn">Select function</string>
+    <string name="idcard_xzsfsbfs">Please choose a mode for ID identification</string>
+    <string name="idcard_sxtsb">Identification by camera OCR</string>
+    <string name="idcard_dkqsb">"Identification by card reader"</string>
+    <string name="select_show_head_photo">whether show head photo</string>
+    <string name="select_show_head_photo_true">true</string>
+    <string name="select_show_head_photo_false">false</string>
+    <string name="get_id_front_fail">Failure to obtain positive information card</string>
+    <string name="get_id_front_success">Successfully obtain identity cards positive messages</string>
+    <string name="get_id_back_fail">Negative information failed to obtain ID cards</string>
+    <string name="get_id_back_success">Successfully obtain identity cards negative information</string>
+    <string name="identify_fail">API module is not installed</string>
+    <string name="none"> </string>
+    <string name="idCard_front_info">ID positive messages</string>
+    <string name="idCard_back_info">ID negative information</string>
+    <string name="idcard_zwxx">Fingerprint information:</string>
+    <string name="idcard_ysmz">right thumb</string>
+    <string name="idcard_yssz">index finger of the right hand</string>
+    <string name="idcard_yszz">middle finger of the right hand</string>
+    <string name="idcard_yshz">ring finger of the right hand</string>
+    <string name="idcard_ysxz">little finger of the right hand</string>
+    <string name="idcard_zsmz">left thumb</string>
+    <string name="idcard_zssz">index finger of the left hand</string>
+    <string name="idcard_zszz">middle finger of the left hand</string>
+    <string name="idcard_zshz">ring finger of the left hand</string>
+    <string name="idcard_zsxz">little finger of the left hand</string>
+    <string name="idcard_ysbqdzw">uncertain finger of the right hand</string>
+    <string name="idcard_zsbqdzw">uncertain finger of the left hand</string>
+    <string name="idcard_qtbqdzw">other uncertain finger</string>
+    <string name="idcard_zwwz">uncertain finger</string>
+    <string name="idcard_zccg">register success</string>
+    <string name="idcard_zcsb">register fail</string>
+    <string name="idcard_wzc">uregister</string>
+    <string name="idcard_zcztwz">unknow register</string>
+    <string name="idcard_zwzl">fingerprint quality=</string>
+    <string name="idcard_wdqhbhzw">(Fingerprint is not read or not included the fingerprint)</string>
+
+    <!-- IC/PSAM -->
+    <string name="pcsc_test">IC Card Test</string>
+    <string name="psam_test">PSAM Test</string>
+    <string name="open_reader">Open Reader</string>
+    <string name="close_reader">Close Reader</string>
+    <string name="verify">Verify</string>
+    <string name="modify">Modify</string>
+    <string name="sle4442read_addr">addr(0~255):</string>
+    <string name="sle4442read_numm">num(1~256):</string>
+    <string name="sle4442write_addr">addr(0~255):</string>
+    <string name="sle4428read_addr">addr(0~1023):</string>
+    <string name="sle4428read_num">num(0~1024):</string>
+    <string name="sle4428write_addr">addr(0~1023):</string>
+    <string name="content">content:</string>
+    <string name="PSC">PSC</string>
+    <string name="reader">Reader:</string>
+    <string name="get_ATR">get ATR</string>
+    <string name="get_PROTOCOL">get protocol</string>
+    <string name="apdu_to_send">APDU to send</string>
+    <string name="send_apdu">Send APDU</string>
+    <string name="get_ATR_fail">get ATR fail</string>
+    <string name="get_ATR_success">get ATR success：</string>
+    <string name="get_data_success">get data success</string>
+    <string name="get_protocol_success">get protocol success</string>
+    <string name="power_on">Power on</string>
+    <string name="power_off">Power off</string>
+    <string name="send_APDU_fail">send APDU fail</string>
+    <string name="send_APDU_success">send APDU success,return：</string>
+    <string name="send_comm_success">send command success</string>
+    <string name="ic_waring">Tip：\nATR:Reset response instructions\nprotocol：Communication protocol\n"A0A40000023F00":Open the smart kagan directory commands\nAPDU:Smart card communication instruction</string>
+
+    <!-- MoneyBox  -->
+    <string name="moneybox_test">MoneyBox Test</string>
+    <string name="moneybox_open">Open MoneyBox</string>
+    <string name="moneybox_toast_text_low_battery">The battery is low,Please connect the charger</string>
+
+    <!-- IR -->
+    <string name="ir_test">IR Test</string>
+    <string name="ir_tv_initializing">Initializing,Please Waiting...</string>
+    <string name="ir_tv_staff_stat">Personnel Status：　</string>
+    <string name="ir_tv_close">Close</string>
+    <string name="ir_tv_leave">Leave</string>
+
+    <!-- Led -->
+    <string name="led">LED Test</string>
+    <string name="led_bt_green_open">Open Green Led</string>
+    <string name="led_bt_green_close">Close Green Led</string>
+    <string name="led_bt_red_open">Open Red Led</string>
+    <string name="led_bt_red_close">Close Red Led</string>
+
+    <!--Laser -->
+    <string name="decode">Laser Test</string>
+    <string name="decode_read_with_format">Read Data With Format</string>
+    <string name="decode_read">Read Data</string>
+
+    <!-- NFC -->
+    <string name="nfc">NFC Test</string>
+    <string name="nfc_tv_scanning">Scanning...</string>
+
+    <string name="nfc_open_text">Open NFC</string>
+    <string name="nfc_close_text">Close NFC</string>
+    <string name="nfc_check_text">Check NFC</string>
+    <string name="nfc_card_data">NFC card data</string>
+    <string name="get_ats">get ats</string>
+    <string name="authenticate">authenticate</string>
+    <string name="nfc_block_data">block data(16 bytes): </string>
+    <string name="nfc_block_hit">Please input 16 bytes data</string>
+    <string name="write_block">write block</string>
+    <string name="read_block">read block</string>
+    <string name="write_value">write initial value</string>
+    <string name="read_value">read value</string>
+    <string name="halt_text">halt block</string>
+    <string name="remove_text">remove block</string>
+    <string name="nfc_value_hit">Please input 4 bytes data</string>
+    <string name="inc_text">increment</string>
+    <string name="dec_text">decrement</string>
+
+    <string name="card_type">Card Type: </string>
+    <string name="type_b">Type B</string>
+    <string name="type_a">Type A</string>
+    <string name="atqa_data">ATQA: </string>
+    <string name="atqb_data">ATQB: </string>
+    <string name="pupi_data">PUPI: </string>
+    <string name="sak_data">SAK: </string>
+    <string name="uid_data">UID: </string>
+
+    <string name="open_success">Open successfully:</string>
+
+
+    <string name="menu_sale">SALE</string>
+    <string name="menu_cardLog">Card Records</string>
+    <string name="menu_set">Settings menu</string>
+    <string name="menu_getLog">Read card records</string>
+    <string name="oneKey">One key operation</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="overTime">Operate over time!</string>
+    <string name="dealing">Dealing</string>
+    <string name="bn_confirm">OK</string>
+    <string name="bn_cancel">cancel</string>
+    <string name="succeed">Succeed</string>
+    <string name="failed">Failed</string>
+    <string name="support">Support</string>
+    <string name="unsupport">Unsupport</string>
+    <string name="areYouSure">Are you sure</string>
+    <string name="back">Back</string>
+    <string name="save">Save</string>
+    <string name="finish">Finish</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="invalidFormat">Invalid Format</string>
+    <string name="inputAgain">Please Input Again</string>
+    <string name="add">Add</string>
+    <string name="nowRecords">Now Records</string>
+    <string name="clear">Clear</string>
+    <string name="approve">Approve</string>
+    <string name="reject">Reject</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="askBank">Please contact the bank</string>
+    <string name="result">Result</string>
+    <string name="originalValue">Original Value</string>
+    <string name="other">Others</string>
+    <string name="amount">Amount</string>
+    <string name="otherAmount">Ohter Amount</string>
+    <string name="countryCode">Country Code</string>
+    <string name="currencyCode">Currency Code</string>
+    <string name="transType">Transaction Type</string>
+    <string name="ATC">ATC</string>
+    <string name="merchantName">Merchant Name</string>
+    <string name="GOODS">GOODS</string>
+    <string name="CASH">CASH</string>
+    <string name="CASHBACK">CASHBACK</string>
+    <string name="INQUIRY">INQUIRY</string>
+    <string name="AVAILABLE_FUNDS_INQUIRY">AVAILABLE FUNDS INQUIRY</string>
+    <string name="DEPOSIT">DEPOSIT</string>
+    <string name="TRANSFER">TRANSFER</string>
+    <string name="warn">Warning</string>
+    <string name="sysWrong">System wrong</string>
+    <string name="tryAgain">Please try again</string>
+    <string name="Wrong">Wrong</string>
+    <string name="serviceCode">Service Code</string>
+
+    <!--网络设置-->
+    <string name="menu_server_set">Server</string>
+    <string name="server_title">Network configuration </string>
+    <string name="server_ip">Simulated host IP</string>
+    <string name="server_port">Simulated host port</string>
+    <string name="please_set_server">Please set network configuration first!</string>
+    <string name="server_connecting">Connecting server</string>
+    <string name="server_waitingResponse">Waiting response</string>
+    <string name="server_connectFailed">Connect server failed</string>
+    <string name="server_networkError">Network Error</string>
+    <string name="server_responseCodeError">Response Code invalid</string>
+
+    <!--交易-->
+    <string name="sale_amount">Amount</string>
+    <string name="sale_totalAmount">Total Amount</string>
+    <string name="sale_transAmount">Transaction Amount</string>
+    <string name="sale_inputAmount">Please input amount</string>
+    <string name="sale_click_useCard">Click &amp; use card</string>
+    <string name="sale_inputOnlinePIN">Please input【Online】PIN</string>
+    <string name="sale_inputOfflinePIN">Please input【Offline】PIN</string>
+    <string name="sale_remainTime">Remaining times</string>
+    <string name="sale_pleaseSelectAPP">Please select the application</string>
+    <string name="sale_selectFailed">Select application failed</string>
+    <string name="sale_IDCard">Identification Card</string>
+    <string name="sale_officerIDCard">Officer ID Card</string>
+    <string name="sale_passport">Passport</string>
+    <string name="sale_arrivalCard">Arrival Card</string>
+    <string name="sale_interimIDCard">Interim Identity card</string>
+    <string name="sale_credentials">credentials</string>
+    <string name="sale_checkCardHolder">Please check cardholder\'s credentials</string>
+    <string name="sale_acceptTrans">Accept Transaction</string>
+    <string name="sale_rejectTrans">Reject Transaction</string>
+    <string name="sale_blacklistCard">Card is in black list</string>
+    <string name="sale_pleaseCheckInfo">Please check the information</string>
+    <string name="sale_account">Account</string>
+    <string name="sale_PINWrong">Wrong PIN</string>
+    <string name="sale_notAllowService">Service not allowed</string>
+    <string name="sale_PINOverTime">PIN Try Limit exceeded</string>
+    <string name="sale_issuerFailed">Issuer authentication failed</string>
+    <string name="sale_inputCashBack">Please Input CashBack Amount</string>
+
+    <string name="transSuccess">Transaction succeed</string>
+    <string name="transCanceled">Transaction canceled</string>
+    <string name="transFailed">Transaction failed</string>
+    <string name="transStopped">Transaction Stopped</string>
+    <string name="transReject">Transaction Rejected</string>
+
+    <!--查IC卡记录-->
+    <string name="ICLog_readFailed">Check records failed</string>
+    <string name="ICLog_record">Record</string>
+
+    <!--读卡流程-->
+    <string name="readcard_UseCard">Please use card</string>
+    <string name="readcard_useStripeCard">Please use magnetic stripe card</string>
+    <string name="readcard_useICCard">Please insert IC card</string>
+    <string name="readcard_useBothCard">Please use IC or stripe card</string>
+    <string name="readcard_pleaseUseCard">Please use your card....</string>
+    <string name="readcard_dealCard">Dealing with IC card</string>
+    <string name="readcard_overTime">Over Time</string>
+    <string name="readcard_useIC">Please use IC card</string>
+    <string name="readcard_initFailed">Device initialize failed</string>
+    <string name="readcard_getMagneticFailed">Failed to get Magnetic Stripe Data</string>
+    <string name="readcard_getPANFailed">Failed to get PAN</string>
+    <string name="readcard_EMVInitFailed">Failed to initialize EMV library</string>
+    <string name="readcard_selectFailed">Failed to select card application</string>
+    <string name="readcard_readDataFailed">Failed to read application data</string>
+    <string name="readcard_verifyFailed">Failed to verify IC card data</string>
+    <string name="readcard_readCardFailed">Failed to read IC card</string>
+    <string name="readcard_dealCardFailed">Failed to deal with IC card</string>
+    <string name="readcard_unSupport">Stripe card or IC card is unsupported, please check terminal config</string>
+    <string name="readcard_userCancel">User canceled</string>
+    <string name="readcard_downToMagStripe">Failed to deal with IC card, try magnetic stripe please</string>
+
+    <string name="card_pullOut">Please pull out your card</string>
+
+    <!--交易类型设置-->
+    <string name="tradeType_set">Transaction Type</string>
+    <string name="tradeType_select">Please select the type</string>
+    <string name="tradeType_name_goods">Goods</string>
+    <string name="tradeType_name_services">Service</string>
+    <string name="tradeType_name_cash">Cash</string>
+    <string name="tradeType_name_cashBack">Cash Back</string>
+    <string name="tradeType_name_balance">Inquire</string>
+
+    <!--交易类型设置-->
+    <string name="accountType_name_default">Default</string>
+    <string name="accountType_save_default">Deposit Account</string>
+    <string name="accountType_debit_default">Check/Debit Account</string>
+    <string name="accountType_credit_default">Credit Account</string>
+
+
+    <!--终端参数设置-->
+    <string name="terminal_set">Terminal Parameter</string>
+    <string name="terminal_timeSet">Time Set</string>
+    <string name="terminal_accountType">Account Type(5F57)</string>
+    <string name="terminal_tradeProperty">Terminal Transaction Property(9F66)</string>
+    <string name="terminal_terminalCountryCode">Terminal Country Code(9F1A)</string>
+    <string name="terminal_transCurrCode">Transaction Currency Code(5F2A)</string>
+    <string name="terminal_referCurrCode">Transaction Reference Currency Code(9F3C)</string>
+    <string name="terminal_transCurrExp">Transaction Currency Exponent(9F36)</string>
+    <string name="terminal_referCurrExp">Transaction Reference Currency Exponent(9F3D)</string>
+    <string name="terminal_referCurrCon">交易参考货币兑换比率</string>
+    <string name="terminal_interfaceDeviceNo">Interface Device Series Number(9F1E)</string>
+    <string name="terminal_merchantSign">Merchant Identification(9F16)</string>
+    <string name="terminal_terminalID">Terminal Identification(9F1C)</string>
+    <string name="terminal_tranMinAmt">Terminal Minimum Limit(9F1B)</string>
+    <string name="terminal_capability">Terminal Capability(9F33)</string>
+    <string name="terminal_isCatchData">Save Transaction Record</string>
+    <string name="terminal_plsTurnOnGOODS">Please turn on "support GOODS" button</string>
+    <!--终端性能9F33-->
+    <string name="terminal_isManualPAN">Input PAN Manually</string>
+    <string name="terminal_isSupportMagnetic">Magnetic Stripe Card</string>
+    <string name="terminal_isSupportIC">IC Card</string>
+    <string name="terminal_isBrightPINVerify">Plain IC Card PIN Verify</string>
+    <string name="terminal_isPINOnlineVerify">Encryption IC Card PIN Online Verify</string>
+    <string name="terminal_isPINOfflineVerify">Encryption IC Card PIN Offline Verify</string>
+    <string name="terminal_isSign">Sign Name on Paper</string>
+    <string name="terminal_isNoCVM">Not Need CVM</string>
+    <string name="terminal_isCardHolderVerify">Verify Card Holder Credentials</string>
+    <string name="terminal_exCapability">Expand Terminal Capability(9F40)</string>
+    <!--终端附加性能9F40-->
+    <string name="terminal_isNotify">Notify</string>
+    <string name="terminal_isCash">Cash</string>
+    <string name="terminal_isGoods">Goods</string>
+    <string name="terminal_isService">Service</string>
+    <string name="terminal_isCashBack">CashBack</string>
+    <string name="terminal_isQuery">Query</string>
+    <string name="terminal_isForceOnline">Force Online</string>
+    <string name="terminal_isCatchBatchData">Catch Batch Data</string>
+    <string name="terminal_isCatchOnline">Catch Online Data</string>
+
+    <!--AID设置-->
+    <string name="AIDset">AID parameter</string>
+    <string name="AIDSet_addDefaultAID">Set Default AID</string>
+    <string name="AIDSet_addCA12400AID">Set ca.124.00 AID</string>
+    <string name="AIDSet_clearAllAID">Clear All AID</string>
+    <string name="AIDSet_checkAID">Check and Modify AID</string>
+    <string name="AIDSet_delete">Delete AID</string>
+    <string name="AIDSet_save">Save AID</string>
+    <string name="AIDSet_AIDList">AID List</string>
+    <string name="AIDSet_targetPer">Target Percent</string>
+    <string name="AIDSet_maxTargetPer">Max Target Percent</string>
+
+    <string name="AIDTitle_selFlag">ASI(Full/Part)</string>
+    <string name="AIDTitle_priority">Priority Indicate</string>
+    <string name="AIDTitle_targetPer">Target Percent(0~100)(%)</string>
+    <string name="AIDTitle_maxTargetPer">Max Target Percent(0~100)(%)</string>
+    <string name="AIDTitle_floorLimitCheck">Check Minimum Limit</string>
+    <string name="AIDTitle_randTransSel">Do Random Transaction Select</string>
+    <string name="AIDTitle_velocityCheck">Check Velocity</string>
+    <string name="AIDTitle_floorLimit">Minimum Limit</string>
+    <string name="AIDTitle_threshold">Threshold</string>
+    <string name="AIDTitle_TACDenial">TAC(Denial)</string>
+    <string name="AIDTitle_TACOnline">TAC(Online)</string>
+    <string name="AIDTitle_TACDefault">TAC(Default)</string>
+    <string name="AIDTitle_acquierId">Acquier Identification</string>
+    <string name="AIDTitle_DDOL">Default DDOL</string>
+    <string name="AIDTitle_bTDOL">Terminal Default TDOL</string>
+    <string name="AIDTitle_TDOL">Default TDOL</string>
+    <string name="AIDTitle_version">Application Version</string>
+    <string name="AIDTitle_riskManData">Risk Data Management </string>
+    <string name="AIDTitle_bOnlinePin">Need Online PIN</string>
+    <string name="AIDTitle_EC_bTermLimitCheck">是否支持终端交易限额</string>
+    <string name="AIDTitle_EC_TermLimit">终端交易限额</string>
+    <string name="AIDTitle_CL_bStatusCheck">是否支持qPBOC状态检查</string>
+    <string name="AIDTitle_CL_FloorLimit">非接触终端最低限额</string>
+    <string name="AIDTitle_CL_TransLimit">非接触终端交易限额</string>
+    <string name="AIDTitle_CL_CVMLimit">非接触终端CVM限额</string>
+    <string name="AIDTitle_TermQuali_byte2">交易金额与每个AID限额的判断结果</string>
+    <string name="AIDTitle_MerchantCategoryCode">Merchant Category Code</string>
+    <string name="AIDTitle_MerchantID">Merchant Identification</string>
+    <string name="AIDTitle_MerchantName">Merchant Name</string>
+    <string name="AIDTitle_TerminalID">Terminal Identification</string>
+    <string name="AIDTitle_TransCurrCode">Transaction Currency Code</string>
+    <string name="AIDTitle_TransCurrExponent">Transaction Currency Exponent</string>
+    <string name="AIDTitle_TransReferCurrCode">Transaction Reference currency</string>
+    <string name="AIDTitle_TransReferCurrExponent">Transaction Reference currency Exponent</string>
+
+    <string name="AID_fullMatch">Fully Match</string>
+    <string name="AID_partMatch">Partly Match</string>
+    <string name="AID_check">Check</string>
+    <string name="AID_noCheck">Not Check</string>
+
+    <!--CAPK设置-->
+    <string name="CAPKset">CAPK parameter</string>
+    <string name="CAPKSet_addDefaultCAPK">Add Default CAPK</string>
+    <string name="CAPKSet_clearAllCAPK">Clear All CAPK</string>
+    <string name="CAPKSet_checkCAPK">Check/Revoke CAPK</string>
+    <string name="CAPKSet_checkCAPKRecycle">Check CAPK Revocation List</string>
+    <string name="CAPKSet_delete">Delete CAPK</string>
+    <string name="CAPKSet_recycleList">CAPK Revocation List</string><!--证书吊销列表Certificate Revocation List(CRL)-->
+    <string name="CAPKSet_moveOutRecycle">Whether move out from revocation list</string>
+    <string name="CAPKSet_index">Index:</string>
+    <string name="CAPKSet_list">CAPK List</string>
+    <string name="CAPKSet_save">Save CAPK</string>
+    <string name="CAPKSet_add">Add CAPK</string>
+    <string name="CAPKSet_checksumWrong">checksum is wrong</string>
+    <string name="CAPKSet_repeat">CAPK is repeat</string>
+    <string name="CAPKSet_ifCover">whether cover it</string>
+
+    <string name="CAPKTitle_RID">RID</string>
+    <string name="CAPKTitle_KeyID">Key Index</string>
+    <string name="CAPKTitle_HashInd">HASH</string>
+    <string name="CAPKTitle_ArithInd">RSA</string>
+    <string name="CAPKTitle_Modul">Modul</string>
+    <string name="CAPKTitle_Exponent">Exponent</string>
+    <string name="CAPKTitle_ExpDate">Expire Date</string>
+    <string name="CAPKTitle_CheckSum">Check Sum</string>
+
+    <!--异常文件-->
+    <string name="terminal_exceptionFile">Exception file</string>
+    <string name="exception_list">Exception file</string>
+    <string name="exception_add">Add Exception File</string>
+    <string name="exception_exist">This item already exist</string>
+    <string name="exception_deleteOrNot">Delete this item or not</string>
+    <string name="exception_pleaseInput">Please input number</string>
+    <string name="exception_pleaseInputIndex">Please input index</string>
+    <string name="exception_bEnable">Enable exception file check</string>
+    <string name="exception_index">Index </string>
+    <string name="exception_num">Number</string>
+    <string name="exception_indexError">Index is 2 numbers</string>
+
+    <!--交易记录-->
+    <string name="terminal_transRecord">Transaction records</string>
+    <string name="record_deleteAll">Clear all records</string>
+    <string name="record_details">Details</string>
+    <string name="record_result">Transaction Result</string>
+    <string name="record_traceNum">Trace Number</string>
+    <string name="record_batchNum">Batch Number</string>
+    <string name="record_account">Account</string>
+    <string name="record_noRecord">No record</string>
+    <string name="record_notFound">Record is not found</string>
+    <string name="record_batchSend">Batch\nUpload</string>
+
+    <!--打印-->
+    <string name="print">Print</string>
+    <string name="print_menu">Print settings</string>
+    <string name="print_finding">Searching...</string>
+    <string name="print_printing">Printing...</string>
+    <string name="print_ifAutoPrint">Automatically print after transaction</string>
+    <string name="print_ifMaskPAN">Mask PAN</string>
+    <string name="print_grey">Grey</string>
+    <string name="print_nums">Number</string>
+    <string name="print_lastDetail">Print the last record</string>
+    <string name="print_anyDetail">Print any record</string>
+    <string name="print_totalSummary">Print summary</string>
+    <string name="print_inputNumber">Please input record number</string>
+    <string name="debug_msg_switch">emv debug msg switch</string>
+
+    <!--查看软件信息-->
+    <string name="APPInfo">APP Information</string>
+    <string name="APPVersion">APP Version</string>
+    <string name="checkAPPInfo">Check APP Information</string>
+    <string name="checkChecksum">Check APP Checksum</string>
+    <string name="appChecksum">APP Checksum</string>
+    <string name="configChecksum">Config Checksum</string>
+
+    <!--键-->
+    <string name="key_desKey">desKey</string>
+
+    <string name="key_clearAllAID">clearAllAID</string>
+    <string name="key_addDefaultAID">addDefaultAID</string>
+    <string name="key_clearAllCAPK">clearAllCAPK</string>
+    <string name="key_addDefaultCAPK">addDefaultCAPK</string>
+
+    <string name="key_timeSet">timeSet</string>
+    <string name="key_accountType">accountType</string>
+    <string name="key_tradeType">tradeType</string>
+    <string name="key_tradeProperty">tradeProperty</string>
+    <string name="key_terminalCountryCode">terminalCountryCode</string>
+    <string name="key_transCurrCode">transCurrCode</string>
+    <string name="key_referCurrCode">referCurrCode</string>
+    <string name="key_transCurrExp">transCurrExp</string>
+    <string name="key_referCurrExp">referCurrExp</string>
+    <string name="key_referCurrCon">referCurrCon</string>
+    <string name="key_interfaceDeviceNo">interfaceDeviceNo</string>
+    <string name="key_merchantName">merchantName</string>
+    <string name="key_merchantID">merchantID</string>
+    <string name="key_terminalID">terminalID</string>
+    <string name="key_tranMinAmt">tranMinAmt</string>
+    <string name="key_isForceOnline">isForceOnline</string>
+    <string name="key_isCatchData">isCatchData</string><!--是否保存交易记录-->
+    <!--终端性能9F33-->
+    <string name="key_terminalCapability">terminalCapability</string>
+    <string name="key_isManualPAN">isManualPAN</string>
+    <string name="key_isSupportMagnetic">isSupportMagnetic</string>
+    <string name="key_isSupportIC">isSupportIC</string>
+    <string name="key_isBrightPINVerify">isBrightPINVerify</string>
+    <string name="key_isPINOnlineVerify">isPINOnlineVerify</string>
+    <string name="key_isPINOfflineVerify">isPINOfflineVerify</string>
+    <string name="key_isSign">isSign</string>
+    <string name="key_isNoCVM">isNoCVM</string>
+    <string name="key_isCardHolderVerify">isCardHolderVerify</string>
+
+    <string name="key_isCatchBatchData">isCatchBatchData</string>
+    <string name="key_isCatchOnline">isCatchOnline</string>
+    <string name="key_isNotify">isNotify</string>
+    <string name="key_isCash">isCash</string>
+    <string name="key_isGoods">isGoods</string>
+    <string name="key_isService">isService</string>
+    <string name="key_isCashBack">isCashBack</string>
+    <string name="key_isQuery">isQuery</string>
+
+    <string name="key_deleteAPP">deleteAPP</string>
+    <string name="key_deleteCAPK">deleteCAPK</string>
+    <string name="key_addAPP">addAPP</string>
+    <string name="key_addCA12400APP">addCA12400APP</string>
+    <string name="key_addCAPK">addCAPK</string>
+    <string name="key_checkAID">checkAID</string>
+    <string name="key_checkCAPK">checkCAPK</string>
+    <string name="key_checkCAPKRecycle">checkCAPKRecycle</string>
+
+    <string name="key_addBlackItem">key_addBlackItem</string>
+    <string name="key_checkBlacklist">key_checkBlacklist</string>
+
+    <string name="key_printAuto">printAuto</string>
+    <string name="key_printMaskPAN">printMaskPAN</string>
+    <string name="key_printGrey">printGrey</string>
+    <string name="key_printNums">printNums</string>
+    <string name="key_printLastDetail">printLastDetail</string>
+    <string name="key_printAnyDetail">printAnyDetail</string>
+    <string name="key_printSummary">printSummary</string>
+    <string name="key_printTest">printTest</string>
+
+    <string name="key_isemvmgson">emvdebugmsg</string>
+
+    <string name="key_bEnableException">bEnableException</string>
+
+    <!--AID设置的PreferenceScreen的Key-->
+    <string name="key_AID_selFlag">AID_selFlag</string>
+    <string name="key_AID_priority">AID_priority</string>
+    <string name="key_AID_targetPer">AID_targetPer</string>
+    <string name="key_AID_maxTargetPer">AID_maxTargetPer</string>
+    <string name="key_AID_floorLimitCheck">AID_floorLimitCheck</string>
+    <string name="key_AID_randTransSel">AID_randTransSel</string>
+    <string name="key_AID_velocityCheck">AID_velocityCheck</string>
+    <string name="key_AID_floorLimit">AID_floorLimit</string>
+    <string name="key_AID_threshold">AID_threshold</string>
+    <string name="key_AID_TACDenial">AID_TACDenial</string>
+    <string name="key_AID_TACOnline">AID_TACOnline</string>
+    <string name="key_AID_TACDefault">AID_TACDefault</string>
+    <string name="key_AID_acquierId">AID_acquierId</string>
+    <string name="key_AID_DDOL">AID_DDOL</string>
+    <string name="key_AID_bTDOL">AID_bTDOL</string>
+    <string name="key_AID_TDOL">AID_TDOL</string>
+    <string name="key_AID_version">AID_version</string>
+    <!--string name="key_AID_riskManData">AID_riskManData</string-->
+    <string name="key_AID_bOnlinePin">AID_bOnlinePin</string>
+    <string name="key_AID_EC_bTermLimitCheck">AID_EC_bTermLimitCheck</string>
+    <string name="key_AID_EC_TermLimit">AID_EC_TermLimit</string>
+    <string name="key_AID_CL_bStatusCheck">AID_CL_bStatusCheck</string>
+    <string name="key_AID_CL_FloorLimit">AID_CL_FloorLimit</string>
+    <string name="key_AID_CL_TransLimit">AID_CL_TransLimit</string>
+    <string name="key_AID_CL_CVMLimit">AID_CL_CVMLimit</string>
+    <string name="key_AID_TermQuali_byte2">AID_TermQuali_byte2</string>
+    <string name="key_AID_MerchantCategoryCode">AID_MerchantCategoryCode</string>
+    <string name="key_AID_MerchantID">AID_MerchantID</string>
+    <string name="key_AID_MerchantName">AID_MerchantName</string>
+    <string name="key_AID_TerminalID">AID_TerminalID</string>
+    <string name="key_AID_TransCurrCode">AID_TransCurrCode</string>
+    <string name="key_AID_TransCurrExponent">AID_TransCurrExponent</string>
+    <string name="key_AID_TransReferCurrCode">AID_TransReferCurrCode</string>
+    <string name="key_AID_TransReferCurrExponent">AID_TransReferCurrExponent</string>
+    <string name="key_AID_TerminalRiskData">AID_TerminalRiskData</string>
+
+    <!--CAPK设置的PreferenceScreen的Key-->
+    <string name="key_CAPK_CAPKID">CAPK_CAPKID</string>
+    <string name="key_CAPK_KeyID">CAPK_KeyID</string>
+    <string name="key_CAPK_RID">CAPK_RID</string>
+    <string name="key_CAPK_HashInd">CAPK_HashInd</string>
+    <string name="key_CAPK_ArithInd">CAPK_ArithInd</string>
+    <string name="key_CAPK_Modul">CAPK_Modul</string>
+    <string name="key_CAPK_Exponent">CAPK_Exponent</string>
+    <string name="key_CAPK_ExpDate">CAPK_ExpDate</string>
+    <string name="key_CAPK_CheckSum">CAPK_CheckSum</string>
+
+    <!--上传55域相关-->
+    <string name="field55_AID">(AID):</string>
+    <string name="field55_AC">(Application Cryptogram):</string>
+    <string name="field55_CID">(Cryptogram Information Data):</string>
+    <string name="field55_IAD">(Issuer Application Data):</string>
+    <string name="field55_unknow">(Unpredictable Number):</string>
+    <string name="field55_ATC">(Application Transaction Counter):</string>
+    <string name="field55_TVR">(Terminal Verification Results):</string>
+    <string name="field55_date">(Transaction Date):</string>
+    <string name="field55_transType">(Transaction Type):</string>
+    <string name="field55_transAmt">(Transaction Amount):</string>
+    <string name="field55_currencyCode">(Currency Code):</string>
+    <string name="field55_AIP">(Application Interchange Profile):</string>
+    <string name="field55_countryCode">(Country Code):</string>
+    <string name="field55_otherAmt">(Other Amount):</string>
+    <string name="field55_terminalCapability">(Terminal Capability):</string>
+    <string name="field55_CVR">(Cardhoder Verification Results):</string>
+    <string name="field55_terminalType">(Terminal Type):</string>
+    <string name="field55_deviceSN">(Device Serial Number):</string>
+    <string name="field55_DF">(Dedicated File Name):</string>
+    <string name="field55_cardAPPver">(Card Application Version):</string>
+    <string name="field55_APPver">(Application Version):</string>
+    <string name="field55_traceNum">(Transaction Trace Number):</string>
+    <string name="field55_account">(Account):</string>
+    <string name="field55_track1data">(Magnetic Track 1 Data):</string>
+    <string name="field55_track2data">(Magnetic Track 2 Data):</string>
+    <string name="field55_TSI">(TSI):</string>
+</resources>

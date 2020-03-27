@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="keyType">
+        <item >MK</item>
+        <item >PIK</item>
+        <item >DEK</item>
+        <item >MAK</item>
+        <item >AESK</item>
+    </string-array>
+
+    <string-array name="wrtmode">
+        <item >Direct</item>
+        <item >ENC</item>
+        <item >DEC</item>
+        <item >XOR</item>
+    </string-array>
+
+    <string-array name="wrtmode_Rsa">
+        <item >Direct</item>
+    </string-array>
+
+    <string-array name="desmode">
+        <item >DEC</item>
+        <item >ENC</item>
+    </string-array>
+
+    <string-array name="macmode">
+        <item >XOR</item>
+        <item >X99</item>
+        <item >PBOC</item>
+    </string-array>
+
+    <string-array name="aesalgm">
+        <item >ECB</item>
+        <item >CBC</item>
+        <item >CFB_128</item>
+        <item >OFB_128</item>
+    </string-array>
+
+    <string-array name="paddingmode">
+        <item >PKCS1</item>
+        <item >SSLV23</item>
+        <item >NoPadding</item>
+        <item >PKCS1_OAEP</item>
+    </string-array>
+
+    <string-array name="pinblockformat">
+        <item >ISO 9564 0</item>
+        <item >ISO 9564 1</item>
+        <item >ISO 9564 2</item>
+        <item >ISO 9564 3</item>
+    </string-array>
+
+    <string-array name="is_show_pan">
+        <item >Not Show Pan</item>
+        <item >Show Pan</item>
+
+    </string-array>
+</resources>

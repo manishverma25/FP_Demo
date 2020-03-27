@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/titlebar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_sale"
+        android:textSize="45dp"
+        android:background="#15479c"
+        android:textColor="#a1a1a1"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <LinearLayout
+
+        android:id="@+id/TableLayout03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sale_inputAmount"
+            android:textSize="30sp"
+            android:layout_marginTop="100dp" />
+
+        <EditText
+            android:id="@+id/inputAmt"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end"
+            android:textSize="30sp"
+            android:inputType="number"
+            android:maxLength="13"
+            android:textColor="#000000"
+            android:text="0.00"
+            style="?android:listSeparatorTextViewStyle"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_saleStart"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="false"
+        android:text="@string/sale_click_useCard"
+        android:textSize="20dp"
+        android:background="@drawable/button_number_violet_shape"
+        android:layout_marginTop="50dp"/>
+
+
+</LinearLayout>

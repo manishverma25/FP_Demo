@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" /> 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/select_psam"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/psam1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:onClick="changePsam"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:enabled="false"
+                    android:text="psam1" />
+
+                <Button
+                    android:id="@+id/psam2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:onClick="changePsam"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="psam2" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/open_btn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/open_reader" />
+
+                <Button
+                    android:id="@+id/close_btn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/close_reader" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/poweron_btn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/power_on" />
+
+                <Button
+                    android:id="@+id/poweroff_btn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/power_off" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/read_btn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/get_ATR" />
+
+                <Button
+                    android:id="@+id/protocol_btn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/get_PROTOCOL" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textReader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/reader"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textAPDU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/apdu_to_send"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/editTextAPDU"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/apdu_to_send"
+                    android:inputType="textMultiLine"
+                    android:text="A0A40000023F00"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonAPDU"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:onClick="sendAPDUkOnClick"
+                    android:text="@string/send_apdu" >
+                </Button>
+            </LinearLayout>
+            <TextView 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/ic_waring"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

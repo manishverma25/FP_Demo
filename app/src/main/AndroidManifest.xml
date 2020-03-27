@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.telpo.tps900_demo">
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_FRAMEBUFFER" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/tps900"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EMVActivity" android:launchMode="singleTask"/>
+        <activity android:name=".ActivityNFC" android:launchMode="singleTask"/>
+        <activity android:name=".ActivitySimple" android:launchMode="singleTask"/>
+        <activity android:name=".ActivityDes" android:launchMode="singleTask"/>
+        <activity android:name=".ActivityDUKPT" android:launchMode="singleTask"/>
+        <activity android:name=".ActivityRsa" android:launchMode="singleTask"/>
+        <activity android:name=".Activitymagnetic" android:launchMode="singleTask"/>
+        <activity android:name=".ActivityEMV_ic" android:launchMode="singleTask"/>
+        <activity android:name=".ActivityPaypassParam" android:launchMode="singleTask"/>
+        <activity android:name=".ActivityTPPaypass" android:launchMode="singleTask"/>
+        <activity android:name=".ActivityVisaPaywave" android:launchMode="singleTask"/>
+        <activity android:name=".Activity_emvall" android:launchMode="singleTask"/>
+        <activity android:name=".Activity_LED" android:launchMode="singleTask"/>
+        <activity android:name=".PsamActivity" android:launchMode="singleTask"/>
+        <activity android:name=".NfcActivity_tps900" android:launchMode="singleTask"/>
+        <activity android:name=".SmarCardNewActivity" android:launchMode="singleTask"/>
+        <activity android:name=".MegneticActivity" android:launchMode="singleTask"/>
+        <activity android:name=".ActivityPrinter" android:launchMode="singleTask"/>
+    </application>
+
+</manifest>

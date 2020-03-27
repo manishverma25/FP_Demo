@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_sava"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAVA"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="TermAddCaps :"/>
+        <EditText
+            android:id="@+id/et_TermAddCaps"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="00"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="AppVersion :"/>
+        <EditText
+            android:id="@+id/et_AppVersion"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="00"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="MagAppVersion :"/>
+            <EditText
+                android:id="@+id/et_MagAppVersion"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="UDOL :"/>
+            <EditText
+                android:id="@+id/et_UDOL"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="KernelID :"/>
+            <EditText
+                android:id="@+id/et_KernelID"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:text="CardInputCap :"/>
+            <EditText
+                android:id="@+id/et_CardInputCap"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="SecurityCap :"/>
+            <EditText
+                android:id="@+id/et_SecurityCap"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="MobileSupport :"/>
+            <EditText
+                android:id="@+id/et_MobileSupport"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="TerminalType :"/>
+            <EditText
+                android:id="@+id/et_TerminalType"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="TermCountryCode :"/>
+            <EditText
+                android:id="@+id/et_TermCountryCode"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="HoldTimeMs :"/>
+            <EditText
+                android:id="@+id/et_HoldTimeMs"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="MessHoldTimeMs :"/>
+            <EditText
+                android:id="@+id/et_MessHoldTimeMs"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="TimeOutSec :"/>
+            <EditText
+                android:id="@+id/et_TimeOutSec"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="FailedMsCount :"/>
+            <EditText
+                android:id="@+id/et_FailedMsCount"
+                android:layout_width="0dp"
+                android:text="00"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="TornLifetimeSec :"/>
+            <EditText
+                android:id="@+id/et_TornLifetimeSec"
+                android:layout_width="0dp"
+                android:text="00"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="TornLogCount :"/>
+            <EditText
+                android:id="@+id/et_TornLogCount"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="RRPrExpectCAPDU :"/>
+            <EditText
+                android:id="@+id/et_RRPrExpectCAPDU"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="RRPrExpectRAPDU :"/>
+            <EditText
+                android:id="@+id/et_RRPrExpectRAPDU"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="RRPrMaxGrace :"/>
+            <EditText
+                android:id="@+id/et_RRPrMaxGrace"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="RRPrMinGrace :"/>
+            <EditText
+                android:id="@+id/et_RRPrMinGrace"
+                android:layout_width="0dp"
+                android:text="00"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="RRPrAccuracyThreshold :"/>
+            <EditText
+                android:id="@+id/et_RRPrAccuracyThreshold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="RRPrMismatchThreshold :"/>
+            <EditText
+                android:id="@+id/et_RRPrMismatchThreshold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Pre_Balance :"/>
+            <EditText
+                android:id="@+id/et_Pre_Balance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Post_Balance :"/>
+            <EditText
+                android:id="@+id/et_Post_Balance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="KernelConfig :"/>
+            <EditText
+                android:id="@+id/et_KernelConfig"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="MagCVM_Cap :"/>
+            <EditText
+                android:id="@+id/et_MagCVM_Cap"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="MagNoCVM_Cap :"/>
+            <EditText
+                android:id="@+id/et_MagNoCVM_Cap"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CVM_Cap :"/>
+            <EditText
+                android:id="@+id/et_CVM_Cap"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NoCVM_Cap :"/>
+            <EditText
+                android:id="@+id/et_NoCVM_Cap"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="FloorLimit :"/>
+            <EditText
+                android:id="@+id/et_FloorLimit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NoOnDevCvmTransLimit :"/>
+            <EditText
+                android:id="@+id/et_NoOnDevCvmTransLimit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="OnDevCvmTransLimit :"/>
+            <EditText
+                android:id="@+id/et_OnDevCvmTransLimit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CvmRequiedLimit :"/>
+            <EditText
+                android:id="@+id/et_CvmRequiedLimit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="00"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>>
+</ScrollView>
+</LinearLayout>

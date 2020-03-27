@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/layout_bounder">
+
+            <EditText
+                android:id="@+id/et_reslut"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:enabled="false"
+                android:text="reslut"
+                android:textSize="15sp" />
+
+        </ScrollView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="3"
+            android:background="@drawable/layout_bounder">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="0,1">
+
+                    <TableRow>
+
+                        <Button
+                            style="@style/buttonNumberStyle"
+                            android:id="@+id/bn_emvDeviceOpen"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/button_number_violet_shape"
+                            android:text="Device Open" />
+
+                        <Button
+                            android:id="@+id/bn_emvDeviceClose"
+                            style="@style/buttonNumberStyle"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/button_number_violet_shape"
+                            android:text="Device Close" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/bn_CheckKernelID"
+                            style="@style/buttonNumberStyle"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/button_number_violet_shape"
+                            android:text="CheckKernelID" />
+
+                        <Button
+                            android:id="@+id/bn_CheckKernelIDEx"
+                            style="@style/buttonNumberStyle"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/button_number_violet_shape"
+                            android:text="CheckKernelIDEx" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

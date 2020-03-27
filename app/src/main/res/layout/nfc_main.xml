@@ -1,0 +1,245 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/nfc_open_btn"
+                style="@style/buttonNumberStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_number_violet_shape"
+                android:text="@string/nfc_open_text" />
+
+            <Button
+                android:id="@+id/nfc_check_btn"
+                style="@style/buttonNumberStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_number_violet_shape"
+                android:text="@string/nfc_check_text" />
+
+            <TextView
+                android:id="@+id/textview_uid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nfc_card_data"
+                android:textColor="@color/color_6b6b6b" />
+
+            <EditText
+                android:id="@+id/nfc_uid_data"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:enabled="false"
+                android:textColor="@color/color_6b6b6b" />
+
+            <TextView
+                android:id="@+id/textNfcReader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/reader"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextNfcAPDU"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/apdu_to_send"
+                    android:inputType="textMultiLine"
+                    android:text="00A404000E325041592E5359532E444446303100"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonNfcAPDU"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/send_apdu"></Button>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/getAtsBtn"
+                style="@style/buttonNumberStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_number_violet_shape"
+                android:text="@string/get_ats" />
+
+            <TextView
+                android:id="@+id/textViewAtsData"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_6b6b6b" />
+
+            <Button
+                android:id="@+id/authenticateBtn"
+                style="@style/buttonNumberStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_number_violet_shape"
+                android:text="@string/authenticate" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTexWriteBlock"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:hint="@string/nfc_block_hit"
+                    android:inputType="textMultiLine"
+                    android:text="00112233445566778899AABBCCDDEEFF"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/writeBlockBtn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/write_block"></Button>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/readBlockBtn"
+                style="@style/buttonNumberStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_number_violet_shape"
+                android:text="@string/read_block" />
+
+            <TextView
+                android:id="@+id/textViewBlockData"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_6b6b6b" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTexWriteValue"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/nfc_value_hit"
+                    android:inputType="textMultiLine"
+                    android:text="00112233"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/writeValueBtn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/write_value"></Button>
+            </LinearLayout>
+
+            <!-- INCREMENT/DECREMENT  -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/incBtn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/inc_text"></Button>
+
+                <Button
+                    android:id="@+id/decBtn"
+                    style="@style/buttonNumberStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_number_violet_shape"
+                    android:text="@string/dec_text"></Button>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/readValueBtn"
+                style="@style/buttonNumberStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_number_violet_shape"
+                android:text="@string/read_value" />
+
+            <TextView
+                android:id="@+id/textViewValueData"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_6b6b6b" />
+
+
+            <Button
+                android:id="@+id/nfc_close_btn"
+                style="@style/buttonNumberStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_number_violet_shape"
+                android:text="@string/nfc_close_text" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
