@@ -22,6 +22,7 @@ import airtel.com.kycfingerprint.bluetooth.BluetoothComm;
 import airtel.com.kycfingerprint.bluetooth.BluetoothPair;
 import airtel.com.kycfingerprint.fingerprintCallback.FingerPrintCallback;
 import airtel.com.kycfingerprint.fingerprintDevices.FingerPrintDevices;
+import airtel.com.kycfingerprint.fingerprintDevices.MantraInitializer;
 import airtel.com.kycfingerprint.receiver.BluetoothReceiver;
 import airtel.com.kycfingerprint.receiver.UsbConnectionReceiver;
 
@@ -56,7 +57,12 @@ public class FingerPrintManager implements FingerPrintCallback {
 
     public static FingerPrintManager getInstance(Context context, FingerPrintDeviceInterface fingerPrintDeviceInterface, FingerPrintDeviceCallback fingerPrintDeviceCallback) {
         if (fingerPrintManager == null) {
-            fingerPrintManager = new FingerPrintManager(context, fingerPrintDeviceCallback, fingerPrintDeviceInterface);
+            synchronized (FingerPrintManager.class) {
+                if (fingerPrintManager == null) {
+                    fingerPrintManager = new FingerPrintManager(context, fingerPrintDeviceCallback, fingerPrintDeviceInterface);
+                }
+            }
+
         } else {
             fingerPrintManager.context = context;
             fingerPrintManager.fingerPrintDeviceCallback = fingerPrintDeviceCallback;
@@ -149,12 +155,18 @@ public class FingerPrintManager implements FingerPrintCallback {
 //        fingerPrintInitWrapper = null;
         registerStartek();
 //        registerFamoco();
-
+        setFingerPrintDevicesIfPossible();
         createPermission();
         usbConnectionReceiver.fetchConnectedDevices(context);
         createPermissionForBluetooth();
         if (fingerPrintDeviceInterface == FingerPrintDeviceInterface.BLUETOOTH)
             startBluetoothInitialization();
+    }
+    
+    private void setFingerPrintDevicesIfPossible(){
+        //todo hardcoded currentFingerPrintDevice for  FingerPrintDevices.MANTRA as
+        currentFingerPrintDevice = FingerPrintDevices.MANTRA;
+
     }
 
     public void startBluetoothInitialization() {
@@ -218,8 +230,8 @@ public class FingerPrintManager implements FingerPrintCallback {
 
     void initDeviceObject() {
 //        fingerPrintInitWrapper = new Mantra200Initializer(context, this);
-//        if (currentFingerPrintDevice == FingerPrintDevices.MANTRA)
-//            fingerPrintInitWrapper = new Mantra100Initializer(context, this);
+        if (currentFingerPrintDevice == FingerPrintDevices.MANTRA)
+            fingerPrintInitWrapper = new MantraInitializer(context, this);
 
 //          if (currentFingerPrintDevice == FingerPrintDevices.STARTEC)
 //            fingerPrintInitWrapper = new StartekInitializer(context, this);
