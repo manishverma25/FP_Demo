@@ -12,9 +12,15 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.telpo.tps550.api.TelpoException;
 import com.telpo.tps550.api.magnetic.MagneticCard;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+import airtel.com.kycfingerprint.fingerprint.FingerPrintManager;
 
 /**
  * For Magnetic stripe card test.
@@ -28,6 +34,7 @@ public class MegneticActivity extends Activity {
 	Handler handler;
 	Thread readThread;
 	TextView title_tv;
+    private FingerPrintManager fingerPrintManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,75 +50,98 @@ public class MegneticActivity extends Activity {
         click = (Button) findViewById(R.id.button_open);
         quit = (Button) findViewById(R.id.button_quit);
         quit.setEnabled(false);
-        handler = new Handler()
-        {
-
-			@Override
-			public void handleMessage(Message msg)
-			{
-                editText1.setText("");
-                editText2.setText("");
-                editText3.setText("");
-				String[] TracData = (String[])msg.obj;
-                for(int i=0; i<3; i++){
-                    if(TracData[i] != null){
-                        switch (i)
-                        {
-                            case 0:
-                                editText1.setText(TracData[i]);
-                                break;
-                            case 1:
-                                editText2.setText(TracData[i]);
-                                break;
-                            case 2:
-                                editText3.setText(TracData[i]);
-                                break;
-                        }
-
-                    }
-                }
-			}
-        	
-        };
+//        handler = new Handler()
+//        {
+//
+//			@Override
+//			public void handleMessage(Message msg)
+//			{
+//                editText1.setText("");
+//                editText2.setText("");
+//                editText3.setText("");
+//				String[] TracData = (String[])msg.obj;
+//                for(int i=0; i<3; i++){
+//                    if(TracData[i] != null){
+//                        switch (i)
+//                        {
+//                            case 0:
+//                                editText1.setText(TracData[i]);
+//                                break;
+//                            case 1:
+//                                editText2.setText(TracData[i]);
+//                                break;
+//                            case 2:
+//                                editText3.setText(TracData[i]);
+//                                break;
+//                        }
+//
+//                    }
+//                }
+//			}
+//
+//        };
         
         
-        try {
-            MagneticCard.open(MegneticActivity.this);
-        } catch (Exception e) {
-			click.setEnabled(false);
-            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-            alertDialog.setTitle(R.string.error);
-            alertDialog.setMessage(R.string.error_open_magnetic_card);
-            alertDialog.setPositiveButton(R.string.dialog_comfirm,new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    MegneticActivity.this.finish();
-                }
-            });
-            alertDialog.show();
-        }
+//        try {
+//            MagneticCard.open(MegneticActivity.this);
+//        } catch (Exception e) {
+//			click.setEnabled(false);
+//            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+//            alertDialog.setTitle(R.string.error);
+//            alertDialog.setMessage(R.string.error_open_magnetic_card);
+//            alertDialog.setPositiveButton(R.string.dialog_comfirm,new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    MegneticActivity.this.finish();
+//                }
+//            });
+//            alertDialog.show();
+//        }
+//
+//        click.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                editText1.setText("");
+//                editText2.setText("");
+//                editText3.setText("");
+//				readThread = new ReadThread();
+//				readThread.start();
+//				click.setEnabled(false);
+//				quit.setEnabled(true);
+//            }
+//        });
+//
+//        quit.setOnClickListener(new View.OnClickListener() {
+//
+//            public void onClick(View v) {
+//            	readThread.interrupt();
+//            	readThread = null;
+//            	click.setEnabled(true);
+//            	quit.setEnabled(false);
+//            }
+//        });
 
+        init();
+    }
+
+
+    private void init(){
         click.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                editText1.setText("");
-                editText2.setText("");
-                editText3.setText("");
-				readThread = new ReadThread();
-				readThread.start();
-				click.setEnabled(false);
-				quit.setEnabled(true);
+                Toast.makeText(MegneticActivity.this,"click ",Toast.LENGTH_LONG).show();
             }
         });
+    }
 
-        quit.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View v) {
-            	readThread.interrupt();
-            	readThread = null;
-            	click.setEnabled(true);
-            	quit.setEnabled(false);
+
+    public void button_onclick_fingerprintdevice(View view) {
+        fingerPrintManager.initializeFingerPrintDevice();
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Toast.makeText(MegneticActivity.this, "No Device Found\nClick Initialize button to retry again.", Toast.LENGTH_SHORT).show();
             }
-        });
+        }, 15000);
     }
 
     protected void onDestroy() {

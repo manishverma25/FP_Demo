@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion 28
+
+    defaultConfig {
+
+        minSdkVersion 16
+        targetSdkVersion 28
+
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        stagging {
+            initWith release
+            debuggable true
+        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'] )
+
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation "com.android.support:appcompat-v7:28.0.0"
+    testImplementation 'junit:junit:4.12'
+
+//    implementation files('libs/mantra200new.jar')
+//    implementation files('libs/mantra.mfs100.jar')
+//    implementation files('libs/ImageSupport-V1.5.jar')
+//    implementation files('libs/ProwessLilyGenSdk-V0.04.jar')
+
+//    implementation files('libs/MorphoSmart_SDK_6.26.0.0.jar')
+
+}
