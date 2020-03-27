@@ -1,11 +1,10 @@
 package com.telpo.tps900_demo;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -17,10 +16,9 @@ import android.widget.Toast;
 import com.telpo.tps550.api.TelpoException;
 import com.telpo.tps550.api.magnetic.MagneticCard;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
+import airtel.com.kycfingerprint.fingerprint.FingerPrintDeviceInterface;
 import airtel.com.kycfingerprint.fingerprint.FingerPrintManager;
+import airtel.com.kycfingerprint.fingerprintDevices.FingerPrintDevices;
 
 /**
  * For Magnetic stripe card test.
@@ -29,8 +27,9 @@ import airtel.com.kycfingerprint.fingerprint.FingerPrintManager;
  *
  */
 public class MegneticActivity extends Activity {
+    private static final String TAG = "MegneticActivity";
     private EditText editText1,editText2,editText3;
-	private Button click,quit;
+	private Button click, initBtn;
 	Handler handler;
 	Thread readThread;
 	TextView title_tv;
@@ -48,8 +47,8 @@ public class MegneticActivity extends Activity {
         editText2 = (EditText) findViewById(R.id.editText_track2);
         editText3 = (EditText) findViewById(R.id.editText_track3);
         click = (Button) findViewById(R.id.button_open);
-        quit = (Button) findViewById(R.id.button_quit);
-        quit.setEnabled(false);
+        initBtn = (Button) findViewById(R.id.button_quit);
+//        initBtn.setEnabled(false);
 //        handler = new Handler()
 //        {
 //
@@ -106,43 +105,136 @@ public class MegneticActivity extends Activity {
 //				readThread = new ReadThread();
 //				readThread.start();
 //				click.setEnabled(false);
-//				quit.setEnabled(true);
+//				initBtn.setEnabled(true);
 //            }
 //        });
 //
-//        quit.setOnClickListener(new View.OnClickListener() {
+//        initBtn.setOnClickListener(new View.OnClickListener() {
 //
 //            public void onClick(View v) {
 //            	readThread.interrupt();
 //            	readThread = null;
 //            	click.setEnabled(true);
-//            	quit.setEnabled(false);
+//            	initBtn.setEnabled(false);
 //            }
 //        });
 
-        init();
+        initView();
     }
 
 
-    private void init(){
+    private void initView(){
         click.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText(MegneticActivity.this,"click ",Toast.LENGTH_LONG).show();
+                fingerPrintManager.startCapture(MegneticActivity.this);
             }
         });
+
+
+
+
+        initBtn.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Toast.makeText(MegneticActivity.this,"initBtn ",Toast.LENGTH_LONG).show();
+                button_onclick_fingerprintdevice(v);
+            }
+        });
+
+
+
+        fingerPrintManager = FingerPrintManager.getInstance(this, FingerPrintDeviceInterface.BOTH,
+                new FingerPrintManager.FingerPrintDeviceCallback() {
+                    @Override
+                    public void onPreviewImage(final Bitmap bitmap) {
+
+                    }
+
+                    @Override
+                    public void onImageDetailsCreated(Object object) {
+                        Log.d(TAG, "onImageDetailsCreated  "+object);
+                        Toast.makeText(MegneticActivity.this, "onImageDetailsCreated object ", Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    @Override
+                    public void onDeviceAttached(FingerPrintDevices device) {
+                        Log.d(TAG, "onDeviceAttached  ");
+                        Toast.makeText(MegneticActivity.this, "onDeviceAttached", Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    @Override
+                    public void onDeviceDetached(FingerPrintDevices device) {
+
+                    }
+
+                    @Override
+                    public void onPermissionChanged(boolean status) {
+
+                    }
+
+                    @Override
+                    public void onDeviceInitialized() {
+                        Log.d(TAG, "onDeviceInitialized  ");
+                        Toast.makeText(MegneticActivity.this, "onDeviceInitialized", Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    @Override
+                    public void onBluetoothFingerPrintDeviceSearchFailed() {
+
+                    }
+
+                    @Override
+                    public void onBluetoothSearchingStarted() {
+
+                    }
+
+                    @Override
+                    public void onBluetoothSearchingFinished() {
+
+                    }
+
+                    @Override
+                    public void onBluetoothPairingStarted() {
+
+                    }
+
+                    @Override
+                    public void onBluetoothPairingFinished() {
+
+                    }
+
+                    @Override
+                    public void onBluetoothPairingFailed() {
+                        Toast.makeText(MegneticActivity.this, "dd", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onError(String errorText) {
+                        Log.d(TAG, "onError  "+errorText);
+                        Toast.makeText(MegneticActivity.this, errorText, Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public FingerPrintManager.BluetoothFingerPrintCallBack getBluetoothImp() {
+                        return null;
+                    }
+                });
     }
 
 
 
     public void button_onclick_fingerprintdevice(View view) {
+
         fingerPrintManager.initializeFingerPrintDevice();
-        new Timer().schedule(new TimerTask() {
-            @Override
-            public void run() {
-                Toast.makeText(MegneticActivity.this, "No Device Found\nClick Initialize button to retry again.", Toast.LENGTH_SHORT).show();
-            }
-        }, 15000);
+
     }
+
+
+
 
     protected void onDestroy() {
     	
